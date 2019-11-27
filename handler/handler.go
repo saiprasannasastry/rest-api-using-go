@@ -24,7 +24,7 @@ func GetAlbums(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var albums []dbinsert.Album
 
-	db, err = sql.Open("mysql", "root:infoblox@tcp(127.0.0.1:3306)/typicode")
+	db, err = sql.Open("mysql", "root:<pwd>@tcp(127.0.0.1:3306)/typicode")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -54,7 +54,7 @@ func GetPhotos(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	var photos []dbinsert.Photo
 
-	db, err = sql.Open("mysql", "root:infoblox@tcp(127.0.0.1:3306)/typicode")
+	db, err = sql.Open("mysql", "root:<pwd>@tcp(127.0.0.1:3306)/typicode")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -103,7 +103,7 @@ func GetAlbum(w http.ResponseWriter, r *http.Request) {
 
 	params := mux.Vars(r)
 
-	db, err = sql.Open("mysql", "root:infoblox@tcp(127.0.0.1:3306)/typicode")
+	db, err = sql.Open("mysql", "root:<pwd>@tcp(127.0.0.1:3306)/typicode")
 	if err != nil {
 		panic(err.Error())
 	}
