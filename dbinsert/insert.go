@@ -31,7 +31,7 @@ type Photo struct {
 
 func Insertalbum(url string) {
 
-	db, err = sql.Open("mysql", "root:infoblox@tcp(127.0.0.1:3306)/typicode")
+	db, err = sql.Open("mysql", "root:<pws>@tcp(127.0.0.1:3306)/typicode")
 	if err != nil {
 		panic(err.Error())
 	}
@@ -65,7 +65,7 @@ func Insertalbum(url string) {
 
 func Insertphotos(url string) {
 
-	db, err = sql.Open("mysql", "root:infoblox@tcp(127.0.0.1:3306)/typicode")
+	db, err = sql.Open("mysql", "root:<pwd>@tcp(127.0.0.1:3306)/typicode")
 	if err != nil {
 		panic(err.Error())
 	}
