@@ -20,7 +20,7 @@ func main() {
 	router.HandleFunc("/albums/{id}", handler.GetAlbum).Methods("GET")
 	router.HandleFunc("/photos", handler.GetPhotos).Methods("GET")
 
-	http.ListenAndServe("10.196.105.125:8000", router)
+	http.ListenAndServe(":8000", router)
 }
 
 
